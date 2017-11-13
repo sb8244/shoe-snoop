@@ -35,4 +35,9 @@ defmodule ShoeSnoop.FetchWorker do
     end
   end
   defp compare_results(_, _), do: nil
+
+  def terminate(reason, state) do
+    System.cmd("say", ["Crash"])
+    IO.inspect {"Terminating", reason, state}
+  end
 end
