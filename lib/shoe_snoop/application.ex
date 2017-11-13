@@ -14,7 +14,7 @@ defmodule ShoeSnoop.Application do
     ret = Supervisor.start_link(children, opts)
 
     ShoeSnoop.start_yeezy_fetchers
-
+    
     ret
   end
 end
